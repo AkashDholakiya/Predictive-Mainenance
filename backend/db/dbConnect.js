@@ -1,9 +1,10 @@
 
 const mongoose = require("mongoose");
 require('dotenv').config()
-
+ 
 
 async function dbConnect() {
+    console.log("DB_URL", process.env.DB_URL);
     // use mongoose to connect this app to our database on mongoDB using the DB_URL (connection string)
     mongoose
       .connect(

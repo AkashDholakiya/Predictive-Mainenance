@@ -17,13 +17,6 @@ localStorage.removeItem("type");
 
   const type=localStorage.getItem("type")
 
-
-
-
-
-
-
-
   return (
     <>
 

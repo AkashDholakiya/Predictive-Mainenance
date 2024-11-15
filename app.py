@@ -54,16 +54,12 @@ def calculate():
             numbers2=ans[time]
             # print("number  is:",numbers)
             # print("number 2 is:",numbers2)
-            numbers = pd.DataFrame([numbers], columns=['engine_no', 'op_setting_1', 'op_setting_2', 'op_setting_3', 'sensor_1',
-       'sensor_2', 'sensor_3', 'sensor_4', 'sensor_5', 'sensor_6', 'sensor_7',
-       'sensor_8', 'sensor_9', 'sensor_10', 'sensor_11', 'sensor_12',
-       'sensor_13', 'sensor_14', 'sensor_15', 'sensor_16', 'sensor_17',
-       'sensor_18', 'sensor_19', 'sensor_20', 'sensor_21'])
+            numbers = pd.DataFrame([numbers], columns=['engine_no', 'op_setting_1', 'op_setting_2', 'op_setting_3', 'sensor_1','sensor_2', 'sensor_3', 'sensor_4', 'sensor_5', 'sensor_6', 'sensor_7', 'sensor_8', 'sensor_9', 'sensor_10', 'sensor_11', 'sensor_12', 'sensor_13', 'sensor_14', 'sensor_15', 'sensor_16', 'sensor_17', 'sensor_18', 'sensor_19', 'sensor_20', 'sensor_21'])
             
             pred=model.predict(numbers)    
             print("pres is: ",pred)  
             ans1=pred[0]
-            # ans1=2
+            # ans1=2    
             if ans1<0:
                 ans1=0
             if ans1<0.4:
@@ -75,7 +71,7 @@ def calculate():
             return jsonify({'error': 'Invalid JSON data. Please provide an array of numbers in the "numbers" field.'}), 400
         except Exception as e:
             return jsonify({'error': str(e)}), 500
-    else:
+    else:   
         return jsonify({'error': 'Request data must be in JSON format.'}), 400
 
 @app.route('/getsensor',methods=['GET', 'POST'])

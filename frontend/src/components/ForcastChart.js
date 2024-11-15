@@ -42,6 +42,7 @@ const ForcastChart = () => {
         // const prevaxis=xaxis;
         // prevaxis.append(newx);
         // setXaxis(prevaxis);
+       // console.log(response)
         setCounter(response.data.time);
       setXaxis(prevXaxis => [...prevXaxis, response.data.time + 1]);
       console.log(xaxis,"and cnt is: ",counter);
@@ -49,6 +50,7 @@ const ForcastChart = () => {
         console.log("new data is: ", new_data)
         setSensordata(new_data);
         const rull = response.data.rul;
+        console.log(rull);
         if(rull<20){
           alert("Schedule maintenence 5")
         }
