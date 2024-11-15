@@ -4,13 +4,6 @@ import { Line } from 'react-chartjs-2';
 import 'chart.js/auto'
 import axios from 'axios';
 
-
-
-
-
-
-
-
 const ForcastChart = () => {
 
   const [sensordata, setSensordata] = useState([0, 0.18373494, 0.406801831, 0.309756921, 0, 1, 0.726247987, 0.242424242,
